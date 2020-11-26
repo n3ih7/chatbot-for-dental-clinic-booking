@@ -1,0 +1,204 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "cs9322 assign2 dentist_service",
+    "contact": {
+      "email": "zack@nono.fi"
+    }
+  },
+  "host": "dentist_service",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "dentist",
+      "description": "get dentist profiles"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/dentists": {
+      "get": {
+        "tags": [
+          "dentist"
+        ],
+        "summary": "get dentist list",
+        "operationId": "getdentistlist",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "dentist_id": {
+                        "type": "string",
+                        "example": "3"
+                      },
+                      "location": {
+                        "type": "string",
+                        "example": "1165 Botany Rd, Mascot NSW 2020"
+                      },
+                      "name": {
+                        "type": "string",
+                        "example": "Sanh Lieu"
+                      },
+                      "specialization": {
+                        "type": "string",
+                        "example": "Paediatric Dentistry"
+                      }
+                    }
+                  }
+                },
+                "length": {
+                  "type": "integer",
+                  "example": "1"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "example": "We didn't find anything match your search."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dentists/id/{did}": {
+      "get": {
+        "tags": [
+          "dentist"
+        ],
+        "summary": "get dentist info by id",
+        "operationId": "getdentistinfobyid",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "did",
+            "in": "path",
+            "description": "dentist ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dentist_id": {
+                  "type": "string",
+                  "example": "3"
+                },
+                "location": {
+                  "type": "string",
+                  "example": "1165 Botany Rd, Mascot NSW 2020"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Sanh Lieu"
+                },
+                "specialization": {
+                  "type": "string",
+                  "example": "Paediatric Dentistry"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "example": "We didn't find anything match your search."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dentists/name/{name}": {
+      "get": {
+        "tags": [
+          "dentist"
+        ],
+        "summary": "get dentist info by name",
+        "operationId": "getdentistinfobyname",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "dentist name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "dentist_id": {
+                  "type": "string",
+                  "example": "3"
+                },
+                "location": {
+                  "type": "string",
+                  "example": "1165 Botany Rd, Mascot NSW 2020"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Sanh Lieu"
+                },
+                "specialization": {
+                  "type": "string",
+                  "example": "Paediatric Dentistry"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "string",
+                  "example": "We didn't find anything match your search."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
