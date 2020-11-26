@@ -1,5 +1,8 @@
 # Chatbot-for-Dental-Clinic-Booking
 
+![](https://github.com/n3ih7/Chatbot-for-Dental-Clinic-Booking/blob/main/archive/Screen_Shot_2019-07-27_at_6.05.38_pm.png?raw=true)
+<img src="https://github.com/n3ih7/Chatbot-for-Dental-Clinic-Booking/blob/main/archive/Screen_Shot_2019-07-27_at_6.22.17_pm.png?raw=true" width="300">
+
 ## Fulfillments
 The bot is able to respond to greeting.
 
