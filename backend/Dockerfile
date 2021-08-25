@@ -10,11 +10,9 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 COPY requirements.txt /t/
 
-COPY pre_processing /t/pre
+COPY db.sqlite /t/
 
-COPY dentist_service /t/d_s
-
-COPY timeslot_service /t/t_s
+COPY *.py /t/
 
 WORKDIR /t
 
