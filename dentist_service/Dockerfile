@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM python:3.8-alpine
 
 LABEL MAINTAINER="zack@nono.fi"
 

@@ -98,7 +98,7 @@ def intent_determination(text):
         return 599, None, None
 
 
-@app.route('/ask', methods=['POST'])
+@app.route('/api/v1/ask', methods=['POST'])
 def ask_n_response():
     jsonContent = request.get_json()
     session = request.cookies.get("session")

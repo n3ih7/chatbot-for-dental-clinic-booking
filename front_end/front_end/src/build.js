@@ -99,7 +99,7 @@ function loadMainPage() {
             renderResult(chat_text, sent_msg_json);
 
             (async () => {
-                const rawResponse = await fetch('http://127.0.0.1:8001/ask', {
+                const rawResponse = await fetch(window.location.href+'api/v1/ask', {
                     // mode: 'cors',
                     cache: "no-cache",
                     method: 'POST',
