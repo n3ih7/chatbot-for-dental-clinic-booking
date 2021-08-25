@@ -18,11 +18,17 @@ The bot can cancel the booking if the client requested it.
 
 ## How to use
 
-`docker-compose up -d --build`
+`docker-compose up -d --build` (The default port is 80)
 
-Then, use your browser (Chrome, Firefox recommended) to access [http://127.0.0.1](http://127.0.0.1 or localhost)
+Then, use your browser (Chrome, Firefox recommended) to access [http://127.0.0.1](http://127.0.0.1) or [localhost](http://localhost)
 
-**NOTE:** The link to swagger doc at the bottom of the page is for reference only.
+If you need to specify another port, use `docker-compose build` then `docker-compose run -d --publish <YOUR DESIRED PORT NUMBER>:80 frontend`
+
+## How to stop
+
+If you are using port 80, use `docker-compose stop`
+
+If you are using custom port, use `docker-compose stop` then `docker ps`, find something like 'frontend_run_xxxxxxxxxxx' in first column then type `docker stop frontend_run_xxxxxxxxxxx`
 
 ## Show case
 
