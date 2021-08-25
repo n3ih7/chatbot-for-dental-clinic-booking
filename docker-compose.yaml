@@ -1,44 +1,24 @@
 version: "3.8"
 services:
-  front_end:
+  frontend:
     build:
-      context: ./front_end
+      context: frontend
       dockerfile: Dockerfile
-    container_name: front_end
+    container_name: frontend
     depends_on:
-      - pre_processing
-      - dentist_service
-      - timeslot_service
+      - backend
     networks:
       - docker-network
     ports:
       - 80:80
-  pre_processing:
+  backend:
     build:
-      context: ./pre_processing
+      context: backend
       dockerfile: Dockerfile
-    container_name: pre_processing
+    container_name: backend
     networks:
       docker-network:
         aliases:
-          - pre_processing
-  dentist_service:
-    build:
-      context: ./dentist_service
-      dockerfile: Dockerfile
-    container_name: dentist_service
-    networks:
-      docker-network:
-        aliases:
-          - dentist_service
-  timeslot_service:
-    build:
-      context: ./timeslot_service
-      dockerfile: Dockerfile
-    container_name: timeslot_service
-    networks:
-      docker-network:
-        aliases:
-          - timeslot_service
+          - backend
 networks:
     docker-network:
