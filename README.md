@@ -20,7 +20,7 @@ The bot can cancel the booking if the client requested it.
 
 `docker-compose up -d --build`
 
-Then, use your browser (Chrome, Firefox recommended) to access [http://127.0.0.1:8001](http://127.0.0.1:8001)
+Then, use your browser (Chrome, Firefox recommended) to access [http://127.0.0.1](http://127.0.0.1 or localhost)
 
 **NOTE:** The link to swagger doc at the bottom of the page is for reference only.
 
