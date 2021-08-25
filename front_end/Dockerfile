@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM nginx:stable
 
 LABEL MAINTAINER="zack@nono.fi"
 
